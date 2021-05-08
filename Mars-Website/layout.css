@@ -1,0 +1,109 @@
+/* Background, images and sizing */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    background-image: url("https://images-assets.nasa.gov/image/PIA21041/PIA21041~orig.jpg");
+
+}
+
+.bg {
+    filter: blur(8px);
+    background-image: url("https://images-assets.nasa.gov/image/PIA21041/PIA21041~orig.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.20);
+    position: absolute;
+    height: 88%;
+    width: 63%;
+    top: 5%;
+    left: 18%;
+}
+
+/* Content */
+.item1 { grid-area: header; }
+.item2 { grid-area: itemone }
+.item3 { grid-area: itemtwo }
+.item4 { grid-area: itemthree }
+.item5 { grid-area: itemfour }
+.item6 { grid-area: itemfive }
+.item7 { grid-area: itemsix }
+.item8 { grid-area: footer }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'itemone itemtwo itemthree'
+    'itemfour itemfive itemsix'
+    'footer footer footer';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-container > div {
+    background-color: rgba(0, 0, 0, 0.40);
+    text-align: center;
+    padding: 8.2% 0;
+    font-size: 30px;
+    color: white;
+}
+
+#i1 {
+    font-size: 40pt;
+}
+
+#i2, #i3, #i4, #i5, #i6, #i7, #i8 {
+    font-size: 17pt;
+}
+
+.button {
+	box-shadow: 11px 7px 7px -2px #899599;
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	background-color:#ededed;
+	border-radius:27px;
+	border:3px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Impact;
+	font-size:26px;
+	padding:10px 54px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.button:hover {
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	background-color:#bab1ba;
+}
+.button:active {
+	position:relative;
+	top:1px;
+}
+
+/* Footer */
+footer {
+    height: 25px;
+    clear: both;
+    width: 100%;
+    background-color: black;
+    color: white;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    text-align: center;
+    font-size: 15pt;
+}
